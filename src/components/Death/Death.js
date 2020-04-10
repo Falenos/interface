@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import { deathData } from '../../js/data';
-import {Questionaire, Results} from '..';
+import {Questionaire, DeathResults} from '..';
 // import './Main.scss';
 
-class Orientation extends Component {
+class DEATH extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -32,10 +32,10 @@ class Orientation extends Component {
         return (
             <Fragment>
                 {!complete && <Questionaire data={deathData} onSelect={this.handleSelect} onComplete={this.handleComplete}/>}
-                {!!complete && <Results/>}
+                {!!complete && <DeathResults/>}
             </Fragment>
         );
     }
 }
 
-export default Orientation;
+export default DEATH;
