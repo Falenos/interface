@@ -11,10 +11,14 @@ class Questionaire extends Component {
     }
 
     handleSelect = (selectionId) => {
-        const { data, onSelect } = this.props;
+        const { data, onSelect, onComplete } = this.props;
         const { questionIndex } = this.state;
 
         onSelect(data[questionIndex].question.id, selectionId);
+
+        if(questionIndex === data.length - 1) {
+            return onComplete();
+        }
 
         this.setState({
             questionIndex: questionIndex + 1,
@@ -26,9 +30,7 @@ class Questionaire extends Component {
         const { questionIndex } = this.state;
         const questionData = data[questionIndex];
         return (
-            <Fragment>
-                {questionData ? <Question data={questionData} onSelect={this.handleSelect}/> : null}
-            </Fragment>
+            <Question data={questionData} onSelect={this.handleSelect}/>
         );
     }
 }

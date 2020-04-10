@@ -12,12 +12,19 @@ class Q1 extends Component {
         }
     }
 
-    handleSelect = () => {
-        return null;
+    handleSelect = (qId, aId) => {
+        this.setState({
+            results: [...this.state.results, {
+                question: qId,
+                answer: aId,
+            }],
+        });
     }
 
     handleComplete = () => {
-        return null;
+        this.setState({
+            complete: true,
+        });
     }
 
     render() {
@@ -25,7 +32,7 @@ class Q1 extends Component {
         return (
             <Fragment>
                 {!complete && <Questionaire data={entryData} onSelect={this.handleSelect} onComplete={this.handleComplete}/>}
-                {complete && <Results/>}
+                {!!complete && <Results/>}
             </Fragment>
         );
     }

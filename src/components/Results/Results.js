@@ -7,10 +7,9 @@ class Results extends Component {
     }
 
     render() {
-        const { complete } = this.state;
         return (
             <Fragment>
-                Questions
+                RESULTS
             </Fragment>
         );
     }
