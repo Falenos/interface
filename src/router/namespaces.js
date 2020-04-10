@@ -1,2 +1,3 @@
 export const MAIN = '/';
-export const Q1 = '/orientation';
+export const ORIENTATION = '/orientation';
+export const DEATH = '/destination';

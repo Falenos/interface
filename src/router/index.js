@@ -1,9 +1,9 @@
 import main from './routes/main';
-import q1 from './routes/q1';
+import orientation from './routes/orientation';
 
 export const routes = [
     main,
-    q1,
+    orientation,
 ];
 
 export default routes;
