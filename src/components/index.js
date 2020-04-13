@@ -6,3 +6,4 @@ export {default as Results} from './Results/Results';
 export {default as Question} from './Question/Question';
 export {default as Death} from './Death/Death';
 export {default as DeathResults} from './DeathResults/DeathResults';
+export {default as ToastList} from './ToastList/ToastList';

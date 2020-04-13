@@ -1,43 +1,11 @@
-import React, { Fragment, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { ToastProvider, useToasts } from 'react-toast-notifications'
+import { ToastProvider } from 'react-toast-notifications'
 import { DEATH } from '../../router/namespaces';
+import { ToastList } from '../';
+import Dude from '../../assets/dude.jpeg';
 // import './Main.scss';
 
-let COUNTER = 0;
-
-const ToastContent = ({children}) => (
-    <div>
-        {children}
-    </div>
-);
-
-const paragraphArray = [
-    'Amet soufflé carrot cake tootsie roll jelly-o chocolate cake.',
-    'Chocolate bar gummies sweet roll macaroon powder sweet tart croissant.',
-    'Pastry ice cream bear claw cupcake topping caramels jelly beans chocolate cheesecake.',
-    'Candy canes pastry cake tart powder.',
-    'Tootsie roll bear claw sesame snaps candy cheesecake caramels cookie.',
-    'Lemon drops donut marzipan gummi bears cotton candy cotton candy jelly-o carrot cake.',
-    'Lemon drops pastry apple pie biscuit tart tootsie roll.',
-    'Brownie icing chupa chups cake cookie halvah gummi bears halvah.',
-    'Sesame snaps donut gingerbread marshmallow topping powder.',
-    'Biscuit chocolate cheesecake pudding candy canes tart halvah sweet.',
-    'Sugar plum cake candy carrot cake.',
-    'Ice cream marzipan liquorice candy canes sesame snaps danish soufflé lollipop candy canes.',
-    'Lemon drops cotton candy pudding.',
-    'Pie cake soufflé cupcake jujubes sugar plum.',
-    'Liquorice lollipop oat cake.',
-];
-
-const timeoutArray = [
-    200,
-    500,
-    1000,
-    1500,
-    2000,
-    600
-];
 
 const dismissTimeoutArray = [
     4000,
@@ -48,10 +16,7 @@ const dismissTimeoutArray = [
 const getRandom = (array) => {
     const index = Math.floor(Math.random() * array.length);
     return array[index];
-}
-
-// Toast Buttons
-// ------------------------------
+};
 
 const appearancesArray = [
     'success',
@@ -60,40 +25,22 @@ const appearancesArray = [
     'info',
 ];
 
-// const MyCustomToast = ({ appearance, children }) => (
-//     <div style={{ background: appearance === 'error' ? 'red' : 'green' }}>
-//         {children}
-//     </div>
-// );
-
-const DeathToasts = () => {
-    const { addToast } = useToasts();
-    // const [count, setCount] = useState(0);
-    // const add = () => {
-    //     addToast(getRandom(paragraphArray), { appearance: 'info', autoDismiss: true});
-    //     setCount(count + 1);
-    // };
-    // if (count <= 2) {
-    //     setTimeout(add, getRandom(timeoutArray));
-    // }
-    const add = () => {
-        addToast(
-            (<ToastContent>
-                {getRandom(paragraphArray)}
-            </ToastContent>),
-            {
-                appearance: getRandom(appearancesArray),
-                autoDismiss: true,
-                autoDismissTimeout: getRandom(dismissTimeoutArray)
-            }
-        );
-        COUNTER = COUNTER + 1;
-    };
-    if (COUNTER <= 20) {
-        setTimeout(add, getRandom(timeoutArray));
-    }
-    return <Fragment/>;
-};
+const toastData = [
+    {
+        content: {
+            title: 'Ela re titlo',
+            subtitle: 'the secret is the secret',
+            description: 'Amet soufflé carrot cake tootsie roll jelly-o chocolate cake.',
+            image: Dude,
+            rating: 3,
+        },
+        settings: {
+            appearance: getRandom(appearancesArray) || 'info',
+            autoDismiss: false,
+            autoDismissTimeout: getRandom(dismissTimeoutArray)
+        },
+    },
+];
 
 const DeathResults = () => {
     return (
@@ -105,7 +52,7 @@ const DeathResults = () => {
                     <button className="text-teal-600 border-solid border-2 border-teal-600 rounded px-12">Proceed</button>
                 </Link>
             </div>
-            <DeathToasts/>
+            <ToastList data={toastData}/>
         </ToastProvider>
     );
 };
