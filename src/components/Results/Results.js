@@ -110,9 +110,9 @@ const Results = () => {
             <Facilitator/>
             <Inventor/>
             <Conservator/>
-            <Link to={{ pathname: DEATH }}>
+            {/* <Link to={{ pathname: DEATH }}>
                 <button className="text-teal-600 border-solid border-2 border-teal-600 rounded px-12">Proceed</button>
-            </Link>
+            </Link> */}
         </div>
     );
 };

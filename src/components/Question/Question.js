@@ -14,7 +14,7 @@ class CheckboxGroup extends Component {
         this.setState({
             selectionId: `${questionId}-${selectionId}`,
         })
-        setTimeout(() => onSelect(selectionId), 600)
+        setTimeout(() => onSelect(selectionId), 800)
 
     };
 
@@ -24,9 +24,9 @@ class CheckboxGroup extends Component {
         return (
             <Fragment>
                 {options.map((option, index) => (
-                    <Fragment key={index}>
+                    <div className="mb-4" key={index}>
                         <input
-                            className="symfony-form-checkbox"
+                            className="checkbox"
                             id={`${questionId}-${option.id}`}
                             onChange={() => this.handleSelect(option.id)}
                             type="checkbox"
@@ -34,7 +34,7 @@ class CheckboxGroup extends Component {
                             value={option.id}
                         />
                         <label className="control-label__text" htmlFor={`${questionId}-${option.id}`}>{option.label}</label>
-                    </Fragment>
+                    </div>
                 ))}
             </Fragment>
         );
@@ -42,8 +42,8 @@ class CheckboxGroup extends Component {
 };
 
 const Question = ({data, onSelect}) => (
-    <div>
-        <h3>{data.question.label}</h3>
+    <div className="text-base text-left text-teal-200 mx-auto md:my-6 max-w-screen-md w-full md:w-6/12 animated-border border-solid border-2 border-teal-400 p-12">
+        <h3 className="mb-6 min-h-full">{data.question.label}</h3>
         <CheckboxGroup onSelect={onSelect} options={data.options} questionId={data.question.id}/>
     </div>
 )

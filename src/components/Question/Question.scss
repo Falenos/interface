@@ -1,4 +1,4 @@
-.symfony-form-checkbox {
+.checkbox {
     display: none;
 
     + .control-label__text {
@@ -29,6 +29,7 @@
             top: -.5rem;
             left: 1.05rem;
             display: block;
+            font-size: 1.5rem;
             font-weight: 600;
             color: #e1001a;
             transition: opacity .3s linear;
