@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { entryData } from '../../js/data';
+import { entryData, TYPE_COMPONENTS } from '../../js/data';
 import {Questionaire, Results} from '../';
 // import './Main.scss';
 
@@ -7,32 +7,51 @@ class Orientation extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            answers: [],
+            results: {
+                I: 0,
+                C: 0,
+                F: 0,
+            },
             complete: null,
-            results: [],
+            resultedType: null,
         }
     }
 
-    handleSelect = (qId, aId) => {
+    handleSelect = (qId, selection) => {
         this.setState({
-            results: [...this.state.results, {
+            answers: [...this.state.answers, {
                 question: qId,
-                answer: aId,
+                answer: selection.answers,
             }],
-        });
+        }, selection.answers.forEach(type => {
+            this.setState({
+                results: {
+                    ...this.state.results,
+                    [type]: this.state.results[type] + 1
+                }
+            });
+        }));
+    }
+
+    calculateResults = () => {
+        const { results } = this.state;
+        return Object.keys(results).reduce((a, b) => results[a] > results[b] ? a : b);
     }
 
     handleComplete = () => {
         this.setState({
             complete: true,
+            resultedType: TYPE_COMPONENTS[this.calculateResults()],
         });
     }
 
     render() {
-        const { complete } = this.state;
+        const { complete, resultedType } = this.state;
         return (
             <Fragment>
                 {!complete && <Questionaire data={entryData} onSelect={this.handleSelect} onComplete={this.handleComplete}/>}
-                {!!complete && <Results/>}
+                {!!complete && <Results result={resultedType}/>}
             </Fragment>
         );
     }

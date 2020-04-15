@@ -9,12 +9,12 @@ class CheckboxGroup extends Component {
         };
     }
 
-    handleSelect = (selectionId) => {
+    handleSelect = (selection) => {
         const { questionId, onSelect } = this.props;
         this.setState({
-            selectionId: `${questionId}-${selectionId}`,
+            selectionId: `${questionId}-${selection.id}`,
         })
-        setTimeout(() => onSelect(selectionId), 800)
+        setTimeout(() => onSelect(selection), 800)
 
     };
 
@@ -28,7 +28,7 @@ class CheckboxGroup extends Component {
                         <input
                             className="checkbox"
                             id={`${questionId}-${option.id}`}
-                            onChange={() => this.handleSelect(option.id)}
+                            onChange={() => this.handleSelect(option)}
                             type="checkbox"
                             checked={selectionId === `${questionId}-${option.id}`}
                             value={option.id}

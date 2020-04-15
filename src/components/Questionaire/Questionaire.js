@@ -10,11 +10,11 @@ class Questionaire extends Component {
         };
     }
 
-    handleSelect = (selectionId) => {
+    handleSelect = (selection) => {
         const { data, onSelect, onComplete } = this.props;
         const { questionIndex } = this.state;
 
-        onSelect(data[questionIndex].question.id, selectionId);
+        onSelect(data[questionIndex].question.id, selection);
 
         if(questionIndex === data.length - 1) {
             return onComplete();

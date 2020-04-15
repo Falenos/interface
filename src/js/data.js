@@ -1,4 +1,10 @@
 const TYPES = {
+    I: "I",
+    C: "C",
+    F: "F",
+};
+
+export const TYPE_COMPONENTS = {
     I: "Inventor",
     C: "Conservator",
     F: "Facilitator",

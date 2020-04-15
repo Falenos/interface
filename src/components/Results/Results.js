@@ -1,7 +1,46 @@
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
-import { DEATH } from '../../router/namespaces';
+import React, { createElement, Fragment } from 'react';
+// import { Link } from 'react-router-dom';
+// import { DEATH } from '../../router/namespaces';
+import { ToastProvider } from 'react-toast-notifications'
+import { ToastList } from '../';
+import Dude from '../../assets/dude.jpeg';
 // import './Main.scss';
+
+
+const dismissTimeoutArray = [
+    4000,
+    6000,
+    10000
+]
+
+const getRandom = (array) => {
+    const index = Math.floor(Math.random() * array.length);
+    return array[index];
+};
+
+const appearancesArray = [
+    'success',
+    'error',
+    'warning',
+    'info',
+];
+
+const toastData = [
+    {
+        content: {
+            title: 'Ela re titlo',
+            subtitle: 'the secret is the secret',
+            description: 'Amet soufflé carrot cake tootsie roll jelly-o chocolate cake.',
+            image: Dude,
+            rating: 3,
+        },
+        settings: {
+            appearance: getRandom(appearancesArray) || 'info',
+            autoDismiss: false,
+            autoDismissTimeout: getRandom(dismissTimeoutArray)
+        },
+    },
+];
 
 const Facilitator = () => (
     <Fragment>
@@ -104,16 +143,23 @@ const Conservator = () => (
     </Fragment>
 );
 
-const Results = () => {
+const options = {
+    Facilitator: <Facilitator/>,
+    Inventor: <Inventor/>,
+    Conservator: <Conservator/>,
+};
+
+const Results = ({result}) => {
     return (
-        <div className="intro-container text-base text-left text-teal-200 mx-auto my-6 max-w-screen-md animated-border border-solid border-2 border-teal-400 p-12">
-            <Facilitator/>
-            <Inventor/>
-            <Conservator/>
-            {/* <Link to={{ pathname: DEATH }}>
-                <button className="text-teal-600 border-solid border-2 border-teal-600 rounded px-12">Proceed</button>
-            </Link> */}
-        </div>
+        <ToastProvider>
+            <div className="intro-container text-base text-left text-teal-200 mx-auto my-6 max-w-screen-md animated-border border-solid border-2 border-teal-400 p-12">
+                {options[result]}
+                {/* <Link to={{ pathname: DEATH }}>
+                    <button className="text-teal-600 border-solid border-2 border-teal-600 rounded px-12">Proceed</button>
+                </Link> */}
+            </div>
+            <ToastList data={toastData}/>
+        </ToastProvider>
     );
 };
 
