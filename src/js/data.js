@@ -16,7 +16,7 @@ const { I, C, F } = TYPES;
 export const entryData = [
     {
         question: {
-            label: "Being around a group of people gives me energy:",
+            label: "Being around a group of people gives me energy",
             id: 1,
         },
         options: [
@@ -39,7 +39,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "The more people I speak with, the better I feel:",
+            label: "The more people I speak with, the better I feel",
             id: 2,
         },
         options: [
@@ -62,7 +62,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "I prefer one to one conversations and relationships as opposed to awide variety and change in people and relationships:",
+            label: "I prefer one to one conversations and relationships as opposed to awide variety and change in people and relationships",
             id: 3,
         },
         options: [
@@ -131,7 +131,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "I rely on my experience rather than on the theoretical alternatives:",
+            label: "I rely on my experience rather than on the theoretical alternatives",
             id: 6,
         },
         options: [
@@ -154,7 +154,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "I have a vivid imagination:",
+            label: "I have a vivid imagination",
             id: 7,
         },
         options: [
@@ -177,7 +177,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "I like to work around targets, deadlines and routines for managing my life:",
+            label: "I like to work around targets, deadlines and routines for managing my life",
             id: 8,
         },
         options: [
@@ -223,7 +223,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "I consider deadlines relative and flexible rather than absolute and rigid:",
+            label: "I consider deadlines relative and flexible rather than absolute and rigid",
             id: 10,
         },
         options: [
@@ -246,7 +246,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "In social media I mainly publish:",
+            label: "In social media I mainly publish",
             id: 11,
         },
         options: [
@@ -279,27 +279,27 @@ export const entryData = [
         },
         options: [
             {
-                label: "science, technology, engineering",
+                label: "Science, Technology, Engineering",
                 id: 1,
                 answers: [I],
             },
             {
-                label: "arts, communications, education, media",
+                label: "Arts, Communications, Education, Media",
                 id: 2,
                 answers: [F],
             },
             {
-                label: "manufacturing, transportation, argiculture",
+                label: "Manufacturing, Transportation, Argiculture",
                 id: 3,
                 answers: [C],
             },
             {
-                label: "tourism, finance, marketing",
+                label: "Tourism, Finance, Marketing",
                 id: 4,
                 answers: [F],
             },
             {
-                label: "none of the above",
+                label: "None of the above",
                 id: 5,
                 answers: [],
             },
@@ -307,7 +307,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "Which of these activities do you think helps you most at work:",
+            label: "Which of these activities do you think helps you most at work",
             id: 13,
         },
         options: [
@@ -317,7 +317,7 @@ export const entryData = [
                 answers: [F],
             },
             {
-                label: "Talking and listeling",
+                label: "Talking and listening",
                 id: 2,
                 answers: [F],
             },
@@ -335,7 +335,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "What class in school gave you most pleasure::",
+            label: "What class in school gave you most pleasure",
             id: 14,
         },
         options: [
@@ -363,7 +363,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "If a particular tool or other aid to your work was broken, what would you do:",
+            label: "If a particular tool or other aid to your work was broken, what would you do",
             id: 15,
         },
         options: [
@@ -391,7 +391,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "Which of these virtues would you say you have most of:",
+            label: "Which of these virtues would you say you have most of",
             id: 16,
         },
         options: [
@@ -419,7 +419,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "If you had to nominate a hero, would s/he most likely be:",
+            label: "If you had to nominate a hero, would s/he most likely be",
             id: 17,
         },
         options: [
@@ -475,7 +475,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "If someone asked you what made you most proud of your work, what would you answer:",
+            label: "If someone asked you what made you most proud of your work, what would you answer",
             id: 19,
         },
         options: [
@@ -503,7 +503,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "How much part does improvisation play in the work you enjoy:",
+            label: "How much part does improvisation play in the work you enjoy",
             id: 20,
         },
         options: [
@@ -531,8 +531,8 @@ export const entryData = [
     },
     {
         question: {
-            label: "If a task / project has gone badly wrong, what would you do to fix it:",
-            id: 21,
+            label: "If a task / project has gone badly wrong, what would you do to fix it",
+            id: 21, 
         },
         options: [
             {
@@ -559,7 +559,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "How long would you like to work, ideally, at a single task:",
+            label: "How long would you like to work, ideally, at a single task",
             id: 22,
         },
         options: [
@@ -587,7 +587,7 @@ export const entryData = [
     },
     {
         question: {
-            label: "Which of these best describes the ideal commitment you are prepared to give to your work:",
+            label: "Which of these best describes the ideal commitment you are prepared to give to your work",
             id: 23,
         },
         options: [
