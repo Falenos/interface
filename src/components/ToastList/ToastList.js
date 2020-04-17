@@ -34,7 +34,11 @@ const appearancesArray = [
 
 const Toast = ({ title, subtitle, description, image, rating }) => (
     <div className="toast-wrapper">
-        {image && <img className="toast-image h-10 w-10 rounded-full" src={image} alt={`${title}-image`} title={title}/>}
+        {image && (
+            <div className="toast-image h-10 w-10 rounded-full">
+                <img className="w-10" src={image} alt={`${title}-image`} title={title}/>
+            </div>
+        )}
         <h3 className="text-xl mb-2">{title}</h3>
         {subtitle && <p className='toast-rating mb-1'><em>"{subtitle}"</em></p>}
         {description && <p className='toast-rating mb-1'>{description}</p>}
