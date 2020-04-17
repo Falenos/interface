@@ -4,13 +4,14 @@
     left: 2px;
     z-index: 4;
     border: 2px solid white;
-    padding: 2px;
+    overflow: hidden;
+
+    img {
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
 .react-toast-notifications__toast__content {
-    padding: 8px 16px !important;
+    padding: 8px 26px !important;
 }
-
-// .react-toast-notifications__toast__icon-wrapper {
-//     width: 40px;
-// }

@@ -3,44 +3,10 @@ import React, { createElement, Fragment } from 'react';
 // import { DEATH } from '../../router/namespaces';
 import { ToastProvider } from 'react-toast-notifications'
 import { ToastList } from '../';
+import { FACILITATOR_POP, INVENTOR_POP, CONSERVATOR_POP } from '../../js/popups';
 import Dude from '../../assets/dude.jpeg';
 // import './Main.scss';
 
-
-const dismissTimeoutArray = [
-    4000,
-    6000,
-    10000
-]
-
-const getRandom = (array) => {
-    const index = Math.floor(Math.random() * array.length);
-    return array[index];
-};
-
-const appearancesArray = [
-    'success',
-    'error',
-    'warning',
-    'info',
-];
-
-const toastData = [
-    {
-        content: {
-            title: 'Ela re titlo',
-            subtitle: 'the secret is the secret',
-            description: 'Amet soufflé carrot cake tootsie roll jelly-o chocolate cake.',
-            image: Dude,
-            rating: 3,
-        },
-        settings: {
-            appearance: getRandom(appearancesArray) || 'info',
-            autoDismiss: false,
-            autoDismissTimeout: getRandom(dismissTimeoutArray)
-        },
-    },
-];
 
 const Facilitator = () => (
     <Fragment>
@@ -149,6 +115,12 @@ const options = {
     Conservator: <Conservator/>,
 };
 
+const toastData = {
+    Facilitator: FACILITATOR_POP,
+    Inventor: INVENTOR_POP,
+    Conservator: CONSERVATOR_POP,
+};
+
 const Results = ({result}) => {
     return (
         <ToastProvider>
@@ -158,7 +130,7 @@ const Results = ({result}) => {
                     <button className="text-teal-600 border-solid border-2 border-teal-600 rounded px-12">Proceed</button>
                 </Link> */}
             </div>
-            <ToastList data={toastData}/>
+            <ToastList data={toastData[result]}/>
         </ToastProvider>
     );
 };

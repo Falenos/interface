@@ -12,7 +12,7 @@ import AlexArmstrong from '../assets/AlexArmstrong.jpg';
 import HarryPegeant from '../assets/HarryPegeant.jpg';
 import KathyGonner from '../assets/KathyGonner.jpg';
 import LouiseIrving from '../assets/LouiseIrving.jpg';
-import FelippeAnastasakes from '../assets/FelipeAnastasakes.png';
+import FelippeAnastasakes from '../assets/FelipeAnastasakes.jpg';
 import BugYork from '../assets/BugYork.jpg';
 import LebooRossiGroup from '../assets/LebooRossiGroup.jpg';
 
