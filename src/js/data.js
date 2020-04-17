@@ -3,7 +3,7 @@ const TYPES = {
     C: "C",
     F: "F",
 };
-
+// test
 export const TYPE_COMPONENTS = {
     I: "Inventor",
     C: "Conservator",
