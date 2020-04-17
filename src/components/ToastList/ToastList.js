@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Component, Fragment, useState } from 'react';
 import { useToasts } from 'react-toast-notifications';
 import star from '../../assets/star.png';
 import starFilled from '../../assets/star-filled.png';
@@ -59,10 +59,19 @@ const ToastHandler = ({data}) => {
     return <Fragment/>;
 };
 
-const ToastList = ({data}) => (
-    <Fragment>
-        {data.map((data, index) => <ToastHandler key={index} data={data} />)}
-    </Fragment>
-);
+class ToastList extends Component {
+    shouldComponentUpdate(nextProps) {
+        const now = JSON.stringify(this.props);
+        const next = JSON.stringify(nextProps);
+        return now !== next;
+    }
+    render() {
+        return (
+            <Fragment>
+                {this.props.data.map((d, index) => <ToastHandler key={index} data={d} />)}
+            </Fragment>
+        );
+    }
+}
 
 export default ToastList;
