@@ -24,7 +24,6 @@ const appearancesArray = Object.keys(appearances);
 export const FACILITATOR_POP = [
     {
         content: {
-<<<<<<< HEAD
             title: 'Claudia Pho',
             subtitle: 'Do you want to discover how to communicate your experiences and information in less than 1 minute?',
             description: 'Claudia will help novice and highly experienced facilitators get authenticity and heart into their message with loads of free advice, services and products.',
@@ -43,12 +42,6 @@ export const FACILITATOR_POP = [
             subtitle: 'Eclectic exchange',
             description: 'Discover easy to implement experiences that will increase your social rating.',
             image: '../assets/JoshuaBitter.jpg',
-=======
-            title: 'Ela re titlo',
-            subtitle: 'the secret is the secret',
-            description: 'Amet soufflé carrot cake tootsie roll jelly-o chocolate cake.',
-            image: '../assets/dude.jpg',
->>>>>>> 808760a926deda53357f52a42cb9d5ba978a68bd
             rating: 3,
         },
         settings: {
@@ -85,7 +78,7 @@ export const FACILITATOR_POP = [
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
     },
-    
+
 ];
 
 export const INVENTOR_POP = [
@@ -190,7 +183,7 @@ export const CONSERVATOR_POP = [
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
     },
-    
+
 ];
 
 export const GENERAL_POP = [

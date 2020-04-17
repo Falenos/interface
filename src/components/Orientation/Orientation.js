@@ -6,6 +6,10 @@ import { GENERAL_POP } from '../../js/popups';
 import {Questionaire, Results} from '../';
 // import './Main.scss';
 
+const changeBackground = (resultedType) => {
+    const html = document.querySelector('html');
+    html.classList.add(`is-${resultedType}`)
+}
 class Orientation extends PureComponent {
     constructor(props) {
         super(props);
@@ -64,6 +68,9 @@ class Orientation extends PureComponent {
 
     render() {
         const { complete, resultedType, popData } = this.state;
+        if (resultedType) {
+            changeBackground(resultedType);
+        }
         return (
             <Fragment>
                 {!complete && (
