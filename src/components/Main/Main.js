@@ -1,10 +1,18 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { ORIENTATION } from '../../router/namespaces';
+import { ORIENTATION, MAIN } from '../../router/namespaces';
 import './Main.scss';
 
 class Main extends Component {
+    constructor() {
+        super();
+        this.state = {
+            enabled: false,
+        }
+    }
+
     render() {
+        const { enabled } = this.state;
         return (
             <div className="intro-container text-base container mx-auto animated-border border-solid border-2 border-teal-400 p-12">
                 <h2 className="mb-6 text-2xl font-semibold">Welcome, fellow citizen of the Techno-Tribalism!</h2>
@@ -18,11 +26,22 @@ class Main extends Component {
                 prosperity for all the tribe.</p>
                 <p className="mb-12">There is one more step in order to choose your cluster in this journey. You will have to fill the following
                 questionnaire, regarding your system registration and your Techno – Tribalism (T -T) citizenship issuing.</p>
-                <Link to={{ pathname: ORIENTATION }}>
+                <Link to={{ pathname: enabled ? ORIENTATION : MAIN}}>
                     <button className="text-teal-400 mb-4 border-solid border-2 border-teal-600 rounded px-12">Next</button>
                 </Link>
-                <p><small>I certify that the information supplied is accurate to the best of my knowledge and I accept the conditions and
-                give the undertakings requested in the T-T Citizenship questionnaire.</small></p>
+                <div>
+                    <input
+                        className="checkbox"
+                        id='welcome-link'
+                        onChange={() => this.setState({enabled: !enabled})}
+                        type="checkbox"
+                        checked={enabled}
+                        value={enabled}
+                    />
+                    <label className="control-label__text" htmlFor='welcome-link'>
+                        <small>I certify that the information supplied is accurate to the best of my knowledge and I accept the conditions and give the undertakings requested in the T-T Citizenship questionnaire.</small>
+                    </label>
+                </div>
             </div>
         );
     }
