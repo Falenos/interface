@@ -15,6 +15,7 @@ import LouiseIrving from '../assets/LouiseIrving.jpg';
 import FelippeAnastasakes from '../assets/FelipeAnastasakes.jpg';
 import BugYork from '../assets/BugYork.jpg';
 import LebooRossiGroup from '../assets/LebooRossiGroup.jpg';
+import LoryFutsuki from '../assets/LoryFutsuki.jpg';
 
 const dismissTimeoutArray = [
     4000,
@@ -47,7 +48,7 @@ export const FACILITATOR_POP = [
             rating: 3,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
@@ -61,7 +62,7 @@ export const FACILITATOR_POP = [
             rating: 3,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
@@ -75,7 +76,7 @@ export const FACILITATOR_POP = [
             rating: 3,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
@@ -89,7 +90,7 @@ export const FACILITATOR_POP = [
             rating: 3,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
@@ -104,10 +105,10 @@ export const INVENTOR_POP = [
             subtitle: 'Effective Inventors progress techniques',
             description: '“Be brave. Take risks. Nothing can substitute experience”',
             image: BarmasaiFeodorovGroup,
-            rating: 3,
+            rating: 4,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
@@ -121,7 +122,7 @@ export const INVENTOR_POP = [
             rating: 3,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
@@ -132,10 +133,10 @@ export const INVENTOR_POP = [
             subtitle: 'Learn, Contribute, Inspire',
             description: '“Great Inventors don’t set out to be Inventors. They set out to make a difference”',
             image: CoralSmith,
-            rating: 3,
+            rating: 2,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
@@ -146,10 +147,10 @@ export const INVENTOR_POP = [
             subtitle: 'Motivation, Results, Charisma ',
             description: 'Nataana will show you how to become, quickly and efficiently, a Great Inventor with fourteen simple strategies.',
             image: NataanaRastogi,
-            rating: 3,
+            rating: 4,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
@@ -163,10 +164,10 @@ export const CONSERVATOR_POP = [
             subtitle: 'Effective Conservators progress techniques',
             description: 'Reo will show you how to avoid time management and stresses with delegation and self-discipline.',
             image: ReoCertain,
-            rating: 3,
+            rating: 4,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
@@ -177,10 +178,10 @@ export const CONSERVATOR_POP = [
             subtitle: 'Reach your goals successfully',
             description: 'Aoi will give you the best tips that will skyrocket your Conservator career.',
             image: AoiStar,
-            rating: 3,
+            rating: 5,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
@@ -189,12 +190,12 @@ export const CONSERVATOR_POP = [
         content: {
             title: 'Alex Armstrongo',
             subtitle: '“Let me show you the basics to become a Great Conservator”',
-            description: 'Great guidance will help you gain greater clarity, take action, and enter a whole new level of discovery.',
+            description: 'Great guidance will help you gain greater clarity, take action and enter a whole new level of discovery.',
             image: AlexArmstrong,
             rating: 3,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
@@ -206,14 +207,11 @@ export const GENERAL_POP = [
     {
         questionId: 1,
         content: {
-            title: 'Harry Peggs',
-            subtitle: 'The secret is the secret',
-            description: 'Get initiated to the hidden knowledge of our most elevated consiousness',
-            image: HarryPegeant,
-            rating: 3,
+            title: 'SYSTEM NOTIFICATION',
+            description: 'This step is crucial for you initial experience in the Tribe. Choose with honesty to help us provide you with the best onboarding experience possible',
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.error,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
@@ -221,70 +219,153 @@ export const GENERAL_POP = [
     {
         questionId: 1,
         content: {
+            title: 'Harry Peggs',
+            subtitle: 'The secret is the secret',
+            description: 'Get initiated to the hidden knowledge of our most elevated conciousness',
+            image: HarryPegeant,
+            rating: 5,
+        },
+        settings: {
+            appearance: appearances.info,
+            autoDismiss: false,
+            autoDismissTimeout: getRandom(dismissTimeoutArray)
+        },
+    },
+    {
+        questionId: 2,
+        content: {
             title: 'Kathy Gonner',
             subtitle: 'The new way to succeed',
             description: '“The world has changed. The path to success is different. The route though challenging, is ours to have if we have the guts to pursue it” ',
             image: KathyGonner,
-            rating: 3,
+            rating: 4,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
-    }, {
-        questionId: 1,
+    },
+    {
+        questionId: 4,
         content: {
             title: 'Louise Irving',
             subtitle: 'Inspiration, Wisdom, Self belief',
             description: 'Do you want to start this journey with ease? Here is your chance! Louise will show you the crucial first steps in acquiring information and experiences effectively.',
             image: LouiseIrving,
-            rating: 3,
+            rating: 5,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
-    }, {
-        questionId: 1,
+    },
+    {
+        questionId: 5,
+        content: {
+            title: 'SYSTEM NOTIFICATION',
+            description: 'Our experts will be with you always. Even after you become one.',
+        },
+        settings: {
+            appearance: appearances.error,
+            autoDismiss: false,
+            autoDismissTimeout: getRandom(dismissTimeoutArray)
+        },
+    },
+    {
+        questionId: 6,
         content: {
             title: 'Felipe Anastasakes',
             subtitle: 'Choose Felipe as your guide in this journey',
             description: '“The first step towards getting somewhere, is to decide that you are not going to stay where you are”',
             image: FelippeAnastasakes,
-            rating: 3,
+            rating: 4,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
-    }, {
-        questionId: 1,
+    },
+    {
+        questionId: 8,
         content: {
             title: 'Bug York',
             subtitle: 'How to find your path to success',
-            description: '“Don’t fear change. You may loose something good, but you may also gain something great”',
+            description: '“Don’t fear change. You may lose something good, but you may also gain something great”',
             image: BugYork,
             rating: 3,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
             autoDismiss: false,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
-    }, {
-        questionId: 1,
+    },
+    {
+        questionId: 8,
+        content: {
+            title: 'SYSTEM NOTIFICATION',
+            subtitle: 'You earned 500 Credits',
+            description: 'We appreciate your honesty. Keep it up.',
+        },
+        settings: {
+            appearance: appearances.error,
+            autoDismiss: false,
+            autoDismissTimeout: getRandom(dismissTimeoutArray)
+        },
+    },
+    {
+        questionId: 9,
+        content: {
+            title: 'SYSTEM NOTIFICATION',
+            description: 'Your initial credibility is not affected by the outcome of the orientation process.',
+        },
+        settings: {
+            appearance: appearances.error,
+            autoDismiss: false,
+            autoDismissTimeout: getRandom(dismissTimeoutArray)
+        },
+    },
+    {
+        questionId: 10,
         content: {
             title: 'Leboo Rossi’s Group',
             subtitle: 'Leboo’s Group will help you handle transition when changing your life',
             description: '“Your current situation is not your final destination”',
             image: LebooRossiGroup,
-            rating: 3,
+            rating: 4,
         },
         settings: {
-            appearance: getRandom(appearancesArray) || appearances.info,
+            appearance: appearances.info,
+            autoDismiss: true,
+            autoDismissTimeout: getRandom(dismissTimeoutArray)
+        },
+    },
+    {
+        questionId: 14,
+        content: {
+            title: 'Lory Futsuki is following you',
+            subtitle: 'Hey there :) Lets chat',
+            description: "Dating can be tough in the first crazy days, but no worries, me and my friends are here to help",
+            image: LoryFutsuki,
+        },
+        settings: {
+            appearance: appearances.info,
+            autoDismiss: true,
+            autoDismissTimeout: getRandom(dismissTimeoutArray)
+        },
+    },
+    {
+        questionId: 16,
+        content: {
+            title: "Let's find your nest",
+            subtitle: 'Nests for all credibility investments',
+            description: "Discovering the perfect house is a life investement. We take your life seriously. Safe and comfy is our moto.",
+        },
+        settings: {
+            appearance: appearances.info,
             autoDismiss: true,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
