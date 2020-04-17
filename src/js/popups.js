@@ -24,6 +24,7 @@ const appearancesArray = Object.keys(appearances);
 export const FACILITATOR_POP = [
     {
         content: {
+<<<<<<< HEAD
             title: 'Claudia Pho',
             subtitle: 'Do you want to discover how to communicate your experiences and information in less than 1 minute?',
             description: 'Claudia will help novice and highly experienced facilitators get authenticity and heart into their message with loads of free advice, services and products.',
@@ -42,6 +43,12 @@ export const FACILITATOR_POP = [
             subtitle: 'Eclectic exchange',
             description: 'Discover easy to implement experiences that will increase your social rating.',
             image: '../assets/JoshuaBitter.jpg',
+=======
+            title: 'Ela re titlo',
+            subtitle: 'the secret is the secret',
+            description: 'Amet soufflé carrot cake tootsie roll jelly-o chocolate cake.',
+            image: '../assets/dude.jpg',
+>>>>>>> 808760a926deda53357f52a42cb9d5ba978a68bd
             rating: 3,
         },
         settings: {
@@ -269,7 +276,97 @@ export const GENERAL_POP = [
         },
         settings: {
             appearance: getRandom(appearancesArray) || appearances.info,
+            autoDismiss: true,
+            autoDismissTimeout: getRandom(dismissTimeoutArray)
+        },
+    },
+    {
+        questionId: 1,
+        content: {
+            title: 'Ela re titlo 2',
+            subtitle: 'the secret is the secret',
+            description: 'Amet soufflé carrot cake tootsie roll jelly-o chocolate cake.',
+            image: '../assets/lalaalaalalalala.jpg',
+            rating: 3,
+        },
+        settings: {
+            appearance: getRandom(appearancesArray) || appearances.info,
             autoDismiss: false,
+            autoDismissTimeout: getRandom(dismissTimeoutArray)
+        },
+    },
+    {
+        questionId: 3,
+        content: {
+            title: 'Ela re titlo 3',
+            subtitle: 'the secret is the secret',
+            description: 'Amet soufflé carrot cake tootsie roll jelly-o chocolate cake.',
+            image: '../assets/lalaalaalalalala.jpg',
+            rating: 3,
+        },
+        settings: {
+            appearance: getRandom(appearancesArray) || appearances.info,
+            autoDismiss: true,
+            autoDismissTimeout: getRandom(dismissTimeoutArray)
+        },
+    },
+    {
+        questionId: 6,
+        content: {
+            title: 'Ela re titlo 4',
+            subtitle: 'the secret is the secret',
+            description: 'Amet soufflé carrot cake tootsie roll jelly-o chocolate cake.',
+            image: '../assets/lalaalaalalalala.jpg',
+            rating: 3,
+        },
+        settings: {
+            appearance: getRandom(appearancesArray) || appearances.info,
+            autoDismiss: true,
+            autoDismissTimeout: getRandom(dismissTimeoutArray)
+        },
+    },
+    {
+        questionId: 6,
+        content: {
+            title: 'Ela re titlo 5',
+            subtitle: 'the secret is the secret',
+            description: 'Amet soufflé carrot cake tootsie roll jelly-o chocolate cake.',
+            image: '../assets/lalaalaalalalala.jpg',
+            rating: 3,
+        },
+        settings: {
+            appearance: getRandom(appearancesArray) || appearances.info,
+            autoDismiss: true,
+            autoDismissTimeout: getRandom(dismissTimeoutArray)
+        },
+    },
+    {
+        questionId: 6,
+        content: {
+            title: 'Ela re titlo 6',
+            subtitle: 'the secret is the secret',
+            description: 'Amet soufflé carrot cake tootsie roll jelly-o chocolate cake.',
+            image: '../assets/lalaalaalalalala.jpg',
+            rating: 3,
+        },
+        settings: {
+            appearance: getRandom(appearancesArray) || appearances.info,
+            autoDismiss: false,
+            autoDismissTimeout: getRandom(dismissTimeoutArray)
+        },
+    },
+    {
+        questionId: 6,
+        content: {
+            title: 'Ela re titlo 7',
+            subtitle: 'the secret is the secret',
+            description: 'Amet soufflé carrot cake tootsie roll jelly-o chocolate cake.',
+            image: '../assets/lalaalaalalalala.jpg',
+            rating: 3,
+        },
+        settings: {
+            appearance: getRandom(appearancesArray) || appearances.info,
+            autoDismiss: true,
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
     },
