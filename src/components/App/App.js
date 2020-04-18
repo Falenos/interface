@@ -13,7 +13,7 @@ class App extends Component {
             let bgElement;
 
             if ("IntersectionObserver" in window) {
-                bgElement = document.querySelectorAll("html");
+                bgElement = document.querySelector("html");
                 var imageObserver = new IntersectionObserver(function (entries, observer) {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
