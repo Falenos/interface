@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import '../../assets/gifteliko.gif';
 
 // import { Header, Footer } from './components/organisms';
 import Routes from '../../router/allRoutes';

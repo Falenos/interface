@@ -9,6 +9,19 @@ html {
     background-color: #0e1c41;
     opacity: .9;
   }
+
+  &.is-Facilitator,
+  &.is-Inventor,
+  &.is-Conservator {
+    background: url('../../assets/gifteliko.gif') no-repeat center center fixed;
+
+    body {
+      // background-color: #0e1c41;
+      background-color: transparent;
+      opacity: .9;
+    }
+  }
+
 }
 
 
