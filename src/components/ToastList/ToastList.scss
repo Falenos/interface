@@ -1,7 +1,7 @@
 .toast-image {
     position: absolute;
-    top: 4px;
-    left: 2px;
+    top: 8px;
+    left: 0px;
     z-index: 4;
     border: 2px solid white;
     overflow: hidden;
@@ -14,4 +14,24 @@
 
 .react-toast-notifications__toast__content {
     padding: 8px 26px !important;
+}
+
+.react-toast-notifications__toast.react-toast-notifications__toast--error {
+    background-color: black;
+
+    .react-toast-notifications__toast__icon-wrapper {
+        background-color: transparent;
+        color: red;
+        border-right: 1px solid #4fd1c5;
+    }
+}
+
+.react-toast-notifications__toast.react-toast-notifications__toast--info {
+    background-color: black;
+    color: white;
+
+    .react-toast-notifications__toast__icon-wrapper {
+        background-color: transparent;
+        border-right: 1px solid #4fd1c5;
+    }
 }
