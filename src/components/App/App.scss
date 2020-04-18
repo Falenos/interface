@@ -1,5 +1,5 @@
 html {
-  background: url('https://media.giphy.com/media/jruP6eiU36Kfgd8W5q/source.gif') no-repeat center center fixed;
+  background: url('../../assets/gifteliko.gif') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -10,17 +10,17 @@ html {
     opacity: .9;
   }
 
-  &.is-Facilitator,
-  &.is-Inventor,
-  &.is-Conservator {
-    background: url('../../assets/gifteliko.gif') no-repeat center center fixed;
+  // &.is-Facilitator,
+  // &.is-Inventor,
+  // &.is-Conservator {
+  //   background: url('../../assets/gifteliko.gif') no-repeat center center fixed;
 
-    body {
-      background-color: #20152c;
-      // background-color: transparent;
-      opacity: .8;
-    }
-  }
+  //   body {
+  //     background-color: #20152c;
+  //     // background-color: transparent;
+  //     opacity: .8;
+  //   }
+  // }
 
 }
 
