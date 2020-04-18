@@ -9,14 +9,54 @@ import './App.scss';
 class App extends Component {
 
     handleLazy() {
+        const callback2 = () => {
+            let bgElement;
+
+            if ("IntersectionObserver" in window) {
+                bgElement = document.querySelectorAll("html");
+                var imageObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            var image = entry.target;
+                            image.classList.add("lazy");
+                            imageObserver.unobserve(image);
+                        }
+                    });
+                });
+
+
+                imageObserver.observe(bgElement);
+
+            } else {
+                let lazyloadThrottleTimeout;
+                bgElement = document.querySelector("html");
+
+                const lazyload = () => {
+                    if (lazyloadThrottleTimeout) {
+                        clearTimeout(lazyloadThrottleTimeout);
+                    }
+
+                    lazyloadThrottleTimeout = setTimeout(() => {
+                        const scrollTop = window.pageYOffset;
+                        if (bgElement.offsetTop < (window.innerHeight + scrollTop)) {
+                            bgElement.src = bgElement.dataset.src;
+                            bgElement.classList.add('lazy');
+                        }
+                    }, 20);
+                }
+
+                lazyload();
+            }
+        }
         const callback = () => {
             const bgContainer = document.querySelector('html');
             if (bgContainer) {
                 bgContainer.classList.add('lazy');
             }
         }
-        document.addEventListener('DOMContentLoaded', callback);
+        document.addEventListener('DOMContentLoaded', callback2);
     }
+
 
     render() {
         this.handleLazy()
@@ -25,7 +65,7 @@ class App extends Component {
                 {/* <Header/> */}
 
                 <main className="main text-gray-300">
-                    <Routes/>
+                    <Routes />
                 </main>
 
                 {/* <Footer/> */}
