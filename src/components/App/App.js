@@ -13,12 +13,12 @@ class App extends Component {
             let bgElement;
 
             if ("IntersectionObserver" in window) {
-                bgElement = document.querySelector("html");
+                bgElement = document.querySelector('.lazy');
                 var imageObserver = new IntersectionObserver(function (entries, observer) {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
                             var image = entry.target;
-                            image.classList.add("lazy");
+                            image.classList.remove("lazy");
                             imageObserver.unobserve(image);
                         }
                     });
@@ -29,7 +29,7 @@ class App extends Component {
 
             } else {
                 let lazyloadThrottleTimeout;
-                bgElement = document.querySelector("html");
+                bgElement = document.querySelector('.lazy');
 
                 const lazyload = () => {
                     if (lazyloadThrottleTimeout) {
@@ -40,7 +40,7 @@ class App extends Component {
                         const scrollTop = window.pageYOffset;
                         if (bgElement.offsetTop < (window.innerHeight + scrollTop)) {
                             bgElement.src = bgElement.dataset.src;
-                            bgElement.classList.add('lazy');
+                            bgElement.classList.remove('lazy');
                         }
                     }, 20);
                 }
@@ -49,9 +49,9 @@ class App extends Component {
             }
         }
         const callback = () => {
-            const bgContainer = document.querySelector('html');
+            const bgContainer = document.querySelector('.lazy');
             if (bgContainer) {
-                bgContainer.classList.add('lazy');
+                bgContainer.classList.remove('lazy');
             }
         }
         document.addEventListener('DOMContentLoaded', callback2);

@@ -343,20 +343,20 @@ export const GENERAL_POP = [
             autoDismissTimeout: getRandom(dismissTimeoutArray)
         },
     },
-    {
-        questionId: 14,
-        content: {
-            title: 'Lory Futsuki is following you',
-            subtitle: 'Hey there :) Lets chat',
-            description: "Dating can be tough in the first crazy days, but no worries, me and my friends are here to help",
-            image: LoryFutsuki,
-        },
-        settings: {
-            appearance: appearances.info,
-            autoDismiss: true,
-            autoDismissTimeout: getRandom(dismissTimeoutArray)
-        },
-    },
+    // {
+    //     questionId: 14,
+    //     content: {
+    //         title: 'Lory Futsuki is following you',
+    //         subtitle: 'Hey there :) Lets chat',
+    //         description: "Dating can be tough in the first crazy days, but no worries, me and my friends are here to help",
+    //         image: LoryFutsuki,
+    //     },
+    //     settings: {
+    //         appearance: appearances.info,
+    //         autoDismiss: true,
+    //         autoDismissTimeout: getRandom(dismissTimeoutArray)
+    //     },
+    // },
     {
         questionId: 16,
         content: {
