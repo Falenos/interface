@@ -124,9 +124,9 @@ const Results = ({result}) => {
         <ToastProvider>
             <div className="intro-container text-base text-left text-teal-200 mx-auto my-6 max-w-screen-md animated-border border-solid border-2 border-teal-400 p-12">
                 {options[result]}
-                {/* <Link to={{ pathname: DEATH }}>
+                <Link to={{ pathname: DEATH }}>
                     <button className="text-teal-600 border-solid border-2 border-teal-600 rounded px-12">Close</button>
-                </Link> */}
+                </Link>
             </div>
             <ToastList data={toastData[result]}/>
         </ToastProvider>
