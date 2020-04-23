@@ -46,6 +46,6 @@ const Question = ({data, onSelect}) => (
         <h3 className="mb-6 min-h-full">{data.question.label}</h3>
         <CheckboxGroup onSelect={onSelect} options={data.options} questionId={data.question.id}/>
     </div>
-)
+);
 
 export default Question;

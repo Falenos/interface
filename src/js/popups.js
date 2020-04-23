@@ -15,7 +15,7 @@ import LouiseIrving from '../assets/LouiseIrving.jpg';
 import FelippeAnastasakes from '../assets/FelipeAnastasakes.jpg';
 import BugYork from '../assets/BugYork.jpg';
 import LebooRossiGroup from '../assets/LebooRossiGroup.jpg';
-import LoryFutsuki from '../assets/LoryFutsuki.jpg';
+// import LoryFutsuki from '../assets/LoryFutsuki.jpg';
 
 const dismissTimeoutArray = [
     4000,
