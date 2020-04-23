@@ -10,7 +10,7 @@ class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <video className="video" autoPlay buffered loop>
+                <video className="video" autoPlay buffered="true" loop>
                     <source src={video} type="video/mp4"/>
                 </video>
                 <main className="main text-gray-300">
