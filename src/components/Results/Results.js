@@ -1,11 +1,9 @@
 import React, { createElement, Fragment } from 'react';
-// import { Link } from 'react-router-dom';
-// import { DEATH } from '../../router/namespaces';
+import { Link } from 'react-router-dom';
+import { DEATH } from '../../router/namespaces';
 import { ToastProvider } from 'react-toast-notifications'
 import { ToastList } from '../';
 import { FACILITATOR_POP, INVENTOR_POP, CONSERVATOR_POP } from '../../js/popups';
-import Dude from '../../assets/dude.jpeg';
-// import './Main.scss';
 
 
 const Facilitator = () => (
@@ -127,7 +125,7 @@ const Results = ({result}) => {
             <div className="intro-container text-base text-left text-teal-200 mx-auto my-6 max-w-screen-md animated-border border-solid border-2 border-teal-400 p-12">
                 {options[result]}
                 {/* <Link to={{ pathname: DEATH }}>
-                    <button className="text-teal-600 border-solid border-2 border-teal-600 rounded px-12">Proceed</button>
+                    <button className="text-teal-600 border-solid border-2 border-teal-600 rounded px-12">Close</button>
                 </Link> */}
             </div>
             <ToastList data={toastData[result]}/>
