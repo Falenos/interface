@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { ORIENTATION, MAIN } from '../../router/namespaces';
+import { ORIENTATION } from '../../router/namespaces';
 import './Main.scss';
 
 class Main extends Component {

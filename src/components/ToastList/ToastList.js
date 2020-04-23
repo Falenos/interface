@@ -14,23 +14,23 @@ const timeoutArray = [
     6000
 ];
 
-const dismissTimeoutArray = [
-    4000,
-    6000,
-    10000
-]
+// const dismissTimeoutArray = [
+//     4000,
+//     6000,
+//     10000
+// ]
 
 const getRandom = (array) => {
     const index = Math.floor(Math.random() * array.length);
     return array[index];
 };
 
-const appearancesArray = [
-    'success',
-    'error',
-    'warning',
-    'info',
-];
+// const appearancesArray = [
+//     'success',
+//     'error',
+//     'warning',
+//     'info',
+// ];
 
 const Toast = ({ title, subtitle, description, image, rating }) => (
     <div className="toast-wrapper">

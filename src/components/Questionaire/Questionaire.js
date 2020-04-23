@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { Question } from '../';
-// import './Main.scss';
 
 class Questionaire extends Component {
     constructor(props) {

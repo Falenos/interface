@@ -1,15 +1,10 @@
-import React, { Component, PureComponent, Fragment } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import { ToastProvider } from 'react-toast-notifications'
 import { entryData, TYPE_COMPONENTS } from '../../js/data';
 import { ToastList } from '../';
 import { GENERAL_POP } from '../../js/popups';
 import {Questionaire, Results} from '../';
-// import './Main.scss';
 
-// const changeBackground = (resultedType) => {
-//     const html = document.querySelector('html');
-//     html.classList.add(`is-${resultedType}`)
-// }
 class Orientation extends PureComponent {
     constructor(props) {
         super(props);
@@ -68,9 +63,6 @@ class Orientation extends PureComponent {
 
     render() {
         const { complete, resultedType, popData } = this.state;
-        // if (resultedType) {
-        //     changeBackground(resultedType);
-        // }
         return (
             <Fragment>
                 {!complete && (
@@ -80,7 +72,6 @@ class Orientation extends PureComponent {
                     </ToastProvider>
                 )}
                 {!!complete && <Results result={resultedType}/>}
-
             </Fragment>
         );
     }

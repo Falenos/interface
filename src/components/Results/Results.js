@@ -1,4 +1,4 @@
-import React, { createElement, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { DEATH } from '../../router/namespaces';
 import { ToastProvider } from 'react-toast-notifications'
