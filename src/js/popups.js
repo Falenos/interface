@@ -35,7 +35,7 @@ const appearances = {
     error: 'error',
 };
 
-const appearancesArray = Object.keys(appearances);
+// const appearancesArray = Object.keys(appearances);
 
 
 export const FACILITATOR_POP = [

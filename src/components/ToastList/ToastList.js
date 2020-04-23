@@ -36,7 +36,7 @@ const Toast = ({ title, subtitle, description, image, rating }) => (
     <div className="toast-wrapper">
         {image && (
             <div className="toast-image h-12 w-12 rounded-full">
-                <img className="h-12" src={image} alt={`${title}-image`} title={title}/>
+                <img className="h-12" src={image} alt={`${title}`} title={title}/>
             </div>
         )}
         <h3 className="text-xl mb-2">{title}</h3>
@@ -44,7 +44,7 @@ const Toast = ({ title, subtitle, description, image, rating }) => (
         {description && <p className='toast-rating mb-1'>{description}</p>}
         {rating && (
             <div className={`toast-rating rate-${rating}`}>
-                {[0,1,2,3,4].map((i) => <img key={i} className="h-4 w-4 mr-1 inline-block" src={rating <= i ? star : starFilled}/>)}
+                {[0,1,2,3,4].map((i) => <img key={i} alt='star' className="h-4 w-4 mr-1 inline-block" src={rating <= i ? star : starFilled}/>)}
             </div>
         )}
     </div>
